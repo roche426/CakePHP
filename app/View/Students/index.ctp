@@ -18,10 +18,10 @@
                     <td> <?= $student['Student']['last_name']; ?> </td>
                     <td> <?= $this->Time->format('d/m/Y', $student['Student']['birtday']); ?> </td>
                     <td>
-                        <p class="btn btn-primary"><?= $this->Html->link('Notes',
-                                array('action' => 'note', $student['Student']['id']), array('class' => 'btn-link',)); ?></p>
-                        <p class="btn btn-primary"><?= $this->Html->link('Editer',
-                                array('action' => 'edit', $student['Student']['id']), array('class' => 'btn-link',)); ?></p>
+                        <p class="btn btn-primary"><?= $this->Html->link('Notes', '/notes/'.$student['Student']['id'],
+                                array('class' => 'btn-link',)); ?></p>
+                        <p class="btn btn-primary"><?= $this->Html->link('Editer', '/editer/'.$student['Student']['id'],
+                                array('class' => 'btn-link')); ?></p>
                         <p class="btn btn-danger"><?= $this->Html->link('Supprimer',
                                 array('action' => 'delete', $student['Student']['id']),
                                 array('class' => 'btn-link')); ?></p>
@@ -36,7 +36,9 @@
         </tbody>
     </table>
 
-    <p class="btn btn-dark"><?= $this->Html->link('Ajouter un étudiant', array('action' => 'add'), array('class' => 'btn-link',)); ?></p>
+    <p class="btn btn-dark"><?= $this->Html->link('Ajouter un étudiant', '/ajouter',
+            array('class' => 'btn-link',));
+    ?></p>
 
 </div>
 

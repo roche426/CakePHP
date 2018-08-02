@@ -19,7 +19,7 @@ class NotesController extends AppController
             if ($this->Note->save($this->request->data)) {
 
                 $this->Flash->default('La note a été ajoutée');
-                return $this->redirect(array('controller' => 'Students', 'action' => 'index'));
+                return $this->redirect('/');
             }
 
             $this->Flash->error(('Impossible d\'ajouter la note'));

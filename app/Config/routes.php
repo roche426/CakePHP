@@ -25,7 +25,15 @@
  * its action called 'display', and we pass a param to select the view file
  * to use (in this case, /app/View/Pages/home.ctp)...
  */
-	Router::connect('/', array('controller' => 'students', 'action' => 'index', 'home'));
+	Router::connect('/', array('controller' => 'students', 'action' => 'index'));
+	Router::connect('/ajouter', array('controller' => 'students', 'action' => 'add'));
+	Router::connect('/editer/:id', array('controller' => 'students', 'action' => 'edit'),
+        array('pass' => array('id'), 'id' => '[0-9]+'));
+	Router::connect('/notes/:id', array('controller' => 'students', 'action' => 'note'),
+        array('pass' => array('id'), 'id' => '[0-9]+'));
+	Router::connect('/note/ajouter/:id', array('controller' => 'notes', 'action' => 'add'),
+        array('pass' => array('id'), 'id' => '[0-9]+'));
+
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */
@@ -43,4 +51,3 @@
  */
 	require CAKE . 'Config' . DS . 'routes.php';
 
-    Router::connect('/test', array('controller' => 'Post'));

@@ -22,11 +22,11 @@
         </tbody>
     </table>
 
-    <p class="btn btn-dark"><?= $this->Html->link('Ajouter une note',
-            array('controller' => 'Notes', 'action' => 'add', $student['Student']['id']),
+    <p class="btn btn-dark"><?= $this->Html->link('Ajouter une note', '/note/ajouter/'.$student['Student']['id'],
             array('class' => 'btn-link')); ?></p>
-    <p class="btn btn-primary"><?= $this->Html->link('Retour à la liste', array('action' => 'index'),
-            array('class' => 'btn-link')); ?></p>
+    <p class="btn btn-primary"><?= $this->Html->link('Retour à la liste', '/',
+            array('class' => 'btn-link')); ?>
+    </p>
 </div>
 
 

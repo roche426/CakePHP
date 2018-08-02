@@ -17,7 +17,7 @@ class StudentsController extends AppController
 
             if ($this->Student->save($this->request->data)) {
                 $this->Flash->default('L\'étudiant à été ajouté à la liste');
-                return $this->redirect(array('action' => 'index'));
+                return $this->redirect('/');
             }
 
             $this->Flash->error(('Impossible d\'ajouter l\'étudiant'));
@@ -30,7 +30,7 @@ class StudentsController extends AppController
         if ($this->Student->delete($id)) {
 
             $this->Flash->default('L\'étudiant à été supprimé');
-            $this->redirect(array('action' => 'index'));
+            $this->redirect('/');
         }
 
         $this->Flash->error('La suppression de l\'étudiant à échoué');
@@ -45,7 +45,7 @@ class StudentsController extends AppController
             $this->Student->id = $id;
             if ($this->Student->save($this->request->data)) {
                 $this->Flash->default(__('L\'étudiant à été modifié'));
-                return $this->redirect(array('action' => 'index'));
+                return $this->redirect('/');
             }
             $this->Flash->error('Impossible de modifier les informations de l\étudiant');
 
