@@ -10,12 +10,10 @@
             echo $this->Form->input('discipline', array(
                 'label' => 'Matière',
                 'required' => true,
-                'allowEmpty' => false
             ));
             echo $this->Form->input('note', array(
                 'label' => 'Note',
                 'required' => true,
-                'allowEmpty' => false,
                 'min' => 0,
                 'max' => 20
             ));

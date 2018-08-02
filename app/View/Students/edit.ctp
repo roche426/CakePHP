@@ -7,12 +7,10 @@
                     echo $this->Form->input('first_name', array(
                         'label' => 'Prénom',
                         'required'   => true,
-                        'allowEmpty' => false
                     ));
                     echo $this->Form->input('last_name', array(
                         'label' => 'Nom',
                         'required'   => true,
-                        'allowEmpty' => false
                     ));
                     echo $this->Form->input('birtday', array(
                         'label' => 'Date de naissance',
