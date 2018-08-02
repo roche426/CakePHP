@@ -16,7 +16,7 @@
                 <tr align="center">
                     <td> <?= $student['Student']['first_name']; ?> </td>
                     <td> <?= $student['Student']['last_name']; ?> </td>
-                    <td> <?= $student['Student']['birtday']; ?> </td>
+                    <td> <?= $this->Time->format('d/m/Y', $student['Student']['birtday']); ?> </td>
                     <td>
                         <p class="btn btn-primary"><?= $this->Html->link('Notes',
                                 array('action' => 'note', $student['Student']['id']), array('class' => 'btn-link',)); ?></p>
