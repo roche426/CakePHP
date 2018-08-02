@@ -18,5 +18,12 @@ class Student extends AppModel
                 'required' => true,
                 'allowEmpty' => false,
                 'message' => 'Ce champs ne doit pas être vide'
+        )),
+        'birtday' => array(
+            'notBlank' => array(
+                'rule' => 'notBlank',
+                'required' => true,
+                'allowEmpty' => false,
+                'message' => 'Ce champs ne doit pas être vide'
         )));
 }
