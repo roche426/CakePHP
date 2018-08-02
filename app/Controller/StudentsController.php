@@ -56,4 +56,12 @@ class StudentsController extends AppController
         }
 
     }
+
+    public function note($id)
+    {
+        $student = $this->Student->findById($id);
+        $notes = $student['Note'];
+        $this->set('student', $student);
+        $this->set('notes', $notes);
+    }
 }

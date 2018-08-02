@@ -22,7 +22,8 @@
                     ));
                 ?>
             <div class="card-footer">
-                <?= $this->Form->end('Enregister');?>    </div>
+                <?= $this->Form->end('Enregister');?>
+            </div>
            </div>
     </div>
 

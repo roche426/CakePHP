@@ -21,6 +21,7 @@
           <td>
               <p class="btn btn-danger"><?= $this->Html->link('Editer', array('action' => 'edit', $student['Student']['id'])); ?></p>
               <p class="btn btn-danger"><?= $this->Html->link('Supprimer', array('action' => 'delete', $student['Student']['id'])); ?></p>
+              <p class="btn btn-danger"><?= $this->Html->link('Notes', array('action' => 'note',  $student['Student']['id'])); ?></p>
           </td>
       </tr>
       <?php endforeach;
