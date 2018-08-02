@@ -26,6 +26,6 @@
            </div>
     </div>
 
-    <p class="btn btn-primary"><?= $this->Html->link('Retour à la liste', array('action' => 'index'));?></p>
+    <p class="btn btn-primary"><?= $this->Html->link('Retour à la liste', array('action' => 'index'), array('class' => 'btn-link',));?></p>
 
 </div>

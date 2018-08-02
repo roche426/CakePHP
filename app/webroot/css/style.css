@@ -1,3 +1,5 @@
-.test{
-    font-size: 100px;
+.btn-link, .btn-link:hover {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
 }
