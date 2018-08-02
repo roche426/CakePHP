@@ -24,7 +24,7 @@
                                 array('class' => 'btn-link')); ?></p>
                         <p class="btn btn-danger"><?= $this->Html->link('Supprimer',
                                 array('action' => 'delete', $student['Student']['id']),
-                                array('class' => 'btn-link')); ?></p>
+                                array('class' => 'btn-link alert-delete', 'data-confirm-message' => 'Confirmer la supression')); ?></p>
                     </td>
                 </tr>
             <?php endforeach;
